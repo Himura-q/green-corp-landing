@@ -3,6 +3,10 @@ header {
     justify-content: center;
     justify-content: space-between;
     padding: 20px;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
 }
 
 body {
@@ -209,4 +213,75 @@ footer p {
     text-decoration: none;
     margin-bottom: 15px;
     opacity: 0.8;
+  }
+
+  .about__sun-image {
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    position: absolute;
+
+  }
+
+  @keyframes rotation {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+  @media (min-width: 720px) and (max-width: 1024px) {
+    .container {
+      padding-left: 10px;   /* Внутренний отступ слева */
+      padding-right: 10px;  /* Внутренний отступ справа */
+    }
+  
+    .logo { /* Предположим, у вас есть класс logo для логотипа */
+      height: 20px;        /* Новая высота логотипа */
+    }
+  
+    section { /* Стиль для отступа сверху и снизу у секций */
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    h1 { /* Стиль для крупных заголовков, h1 */
+      font-size: 36px;      /* Размер шрифта */
+      line-height: 40px;     /* Высота строки */
+    }
+  
+    .solar-panel-image { /* Пример класса для картинки солнечной батареи */
+      width: 280px;        /* Новая ширина картинки */
+    }
+  
+    .about__sun-image { /* Пример класса для картинки солнышка */
+      width: 75px;          /* Новая ширина */
+      height: 75px;         /* Новая высота */
+    }
+  }
+  
+  /* Планшеты (от 720px до 1024px) */
+  @media (min-width: 720px) and (max-width: 1024px) {
+    .container {
+      padding-left: 20px;   /* Внутренний отступ слева */
+      padding-right: 20px;  /* Внутренний отступ справа */
+    }
+  
+    h1 { /* Стиль для крупных заголовков первого блока, h1 */
+      font-size: 36px;      /* Размер шрифта */
+      line-height: 40px;     /* Высота строки */
+    }
+  
+    .solar-panel-image { /* Пример класса для картинки солнечной батареи */
+      width: 280px;        /* Новая ширина картинки */
+    }
+  
+    .about__sun-image { /* Пример класса для картинки солнышка */
+      width: 75px;          /* Новая ширина */
+      height: 75px;         /* Новая высота */
+    }
   }

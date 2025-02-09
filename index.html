@@ -2,9 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Солнечные батареи GreenCorp</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
     <header>
@@ -12,20 +15,34 @@
         <div class="header__controls">
             <a href="#contacts">Контакты</a>
             <button>Заказать</button>
-        </div> 
+        </div>
     </header>
     <main>
         <section class="about">
             <div class="about__info">
-                <h1>Солнечные батареи GreenCorp</h1>
-                <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-                <button>Узнать подробнее</button>
+                <h1 class="animate__animated">Солнечные батареи GreenCorp</h1>
+                <p class="animate__animated">Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
+                <button class="animate__animated">Узнать подробнее <i class="fas fa-arrow-right"></i></button>
             </div>
             <div class="about__images">
-                <img class="about__sun-image" src="images/sun.png">
-                <img class="about__image" src="images/solar-panel.png">
+                <img class="about__sun-image animate__animated" src="images/sun.png" alt="Солнце">
+                <img class="about__image animate__animated" src="images/solar-panel.png" alt="Солнечная панель">
             </div>
         </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate__animated');
+
+            animatedElements.forEach(element => {
+                 if (element.tagName === 'IMG') {
+                     element.classList.add('animate__fadeInRight', 'animate__slow');
+                 } else {
+                     element.classList.add('animate__fadeInLeft', 'animate__slow');
+                 }
+            });
+        });
+    </script>
         <section class="form">
             <div class="form__container">
                 <h1>Оставьте свои контакты</h1>
